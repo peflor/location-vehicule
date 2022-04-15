@@ -1,0 +1,282 @@
+/* Feuille de style principale */
+/* Règles CSS */
+
+* {
+    box-sizing: border-box;
+    /* margin: 0; */
+    /* border: 1px solid grey; */
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img,video {
+    width: 100%;
+    height: auto;
+}
+
+.headPosition {
+    position:relative;
+}
+.titreBox{
+    position: absolute;
+    top: 40px;    
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#titreHeader{    
+    color: #fff;
+    z-index: 1;
+    text-align: center;
+}
+.icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10%;
+}
+.iconGris {
+    color: gray;
+    border: 2px solid gray;
+}
+.iconBlanc{
+    color: #fff;
+    border: 2px solid #fff;
+}
+#menu {
+    display: none;
+}
+ul {
+    list-style: none;
+    background-color: #fff;
+    padding-left:20px;
+    position:absolute;
+    z-index:100;
+    top:50px;
+    left:0;
+    right:0;
+}
+li a {
+    text-decoration: none;
+    color:gray;
+    display:block;
+    padding: 8px;
+}
+.formulaire {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.37);
+    position:absolute;
+    z-index: 2;
+    bottom: 10%;
+    left:10%;
+    max-width: 1500px;   
+}
+.formulaireV2 {
+    position: absolute;
+    bottom: 80px;
+    z-index:10;    
+    width: 90%;
+    margin:auto;
+    left:15px;
+    right:15px;
+    text-align: center;
+}
+.formAction select, .formAction input{
+    width:100%;
+    margin-top:10px;
+}
+.allInput{
+    background-color: rgba(255, 255, 255, 0.521);
+    padding-bottom: 10px;
+}
+.inputDate{
+    position: relative;    
+}
+.inputChamp {
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.iconDate {
+    position: absolute;
+    z-index:99;
+    top:10px;
+    right:0px;
+    background-color: #ccc;
+    padding: 0px 7px;
+    border: 1px solid black;
+    border-radius: 0 5px 5px 0;
+}
+.btnSearch{    
+    width: 100%;
+    border:none;
+    color:#fff;
+    background-color: rgba(0, 128, 0, 0.521);
+    padding: 5px;
+    margin-top: 20px;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    gap: 10px;
+    flex-wrap: wrap;
+    
+}
+.btnRech {
+    border: none;
+    background-color: rgba(0, 128, 0, 0.445);
+    color: #fff;
+    padding:20px 10px 20px 10px ;
+    max-width: 200px;
+    
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    width:90%;
+}
+.mainUp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mainUp p{
+    margin-top:10px;
+}
+.mainUp span{
+    margin-top:10px;
+    font-weight: bold;
+}
+.blocVoitureSeul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
+    
+}
+
+/* Caroussel voiture */
+
+.slideAuto{
+    max-width: 350px;
+    position: relative;
+    margin-bottom: 30px;
+    
+}
+.slideAuto2{
+    max-width: 50%;
+    position: relative;
+    margin-bottom: 30px;
+    
+}
+
+
+.slick-arrow {
+    position: absolute;
+    bottom: 25%;
+    z-index: 2;
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size : 60px;
+}
+.slick-prev {
+    left:-60px;
+}
+.slick-next {
+    right:-60px;
+}
+#btnCharger{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+#charger {
+    text-align: center;
+    border: none;
+    background-color:#198754;
+    color:#fff;
+    padding: 20px 100px;
+    cursor: pointer;
+}
+#carLoad {
+    display: none;
+}
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 800px;
+    margin: 50px auto 100px auto;
+        
+}
+.imgFooter {
+    max-width: 250px;
+}
+footer div span {
+    font-weight: bold;
+}
+footer div p {
+    line-height: 15px;
+}
+
+
+
+@media (max-width: 1100px){
+    section div h2{
+        display: none;
+    }
+    section div p{
+        display: none;
+    }
+    .caroussel img{
+        max-height: 400px;
+        width: auto;
+    }
+    
+}
+
+@media (max-width: 770px){
+    .slick-prev {
+        left:20px;
+        top: -140px;
+    }
+    .slick-next {
+        right:20px;
+        top: -140px;
+    }
+}
+
+@media (min-width: 1100px){
+    
+    .allinput, .formaAction{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        flex-wrap: nowrap;
+    }
+    .formAction select, .inputDate {
+        width:100%;
+        margin-top:10px;
+    }
+    .btnSearch {
+        width: 30%;
+    }
+    .formulaireV2 {
+        width: 50%;
+    }
+}
